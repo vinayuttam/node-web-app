@@ -1,0 +1,16 @@
+{
+  "name": "node-web-app",
+  "version": "1.0.0-alpha",
+  "description": "Sample Node.js web app using Docker",
+  "main": "src/index.js",
+  "repository": "git@github.com:vinayuttam/node-web-app.git",
+  "author": "Vinay Uttam Vemparala <15381417+vinayuttam@users.noreply.github.com>",
+  "private": true,
+  "scripts": {
+    "build": "docker build -t node-web-app .",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
