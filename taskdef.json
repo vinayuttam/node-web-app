@@ -5,6 +5,13 @@
       "name": "<CONTAINER_NAME>",
       "image": "<REPO_URL>",
       "essential": true,
+      "portMappings": [
+        {
+          "hostPort":" <SERVICE_PORT>",
+          "protocol": "tcp",
+          "containerPort":" <SERVICE_PORT>"
+        }
+      ],
       "logConfiguration": {
         "logDriver": "awslogs",
         "secretOptions": null,
@@ -14,13 +21,6 @@
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "portMappings": [
-        {
-          "hostPort": <SERVICE_PORT>,
-          "protocol": "tcp",
-          "containerPort": <SERVICE_PORT>
-        }
-      ]
     }
   ],
   "requiresCompatibilities": [
