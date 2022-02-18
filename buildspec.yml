@@ -1,6 +1,6 @@
 # Build Spec for AWS Code Build
 
-ersion: 0.2
+version: 0.2
 phases:
   pre_build:
     commands:
