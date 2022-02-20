@@ -22,14 +22,14 @@
           "awslogs-region": "<AWS_REGION>",
           "awslogs-stream-prefix": "ecs"
         }
-      },
+      }
     }
   ],
   "requiresCompatibilities": [
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "memory": 1024,
-  "cpu": 2048,
+  "memory": "1024",
+  "cpu": "2048",
   "family": "<TASK_DEFINITION_FAMILY>"
 }
