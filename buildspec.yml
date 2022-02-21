@@ -10,6 +10,7 @@ phases:
       - |
         echo Updating ECS Task Definition File...
         sed -i "3i\"taskRoleArn\": \"arn:aws:iam::<AWS_ACCOUNT_ID>:role/<ECS_TASK_ROLE>\"," taskdef.json
+        IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
   build:
     commands:
       - echo Build started on `date`
@@ -19,6 +20,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
+      - docker push $REPO_URL:latest
       - docker push $REPO_URL:$IMAGE_TAG
       - echo Preparing spec files in new folder
       - mkdir Artifacts
