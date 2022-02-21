@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "<CONTAINER_NAME>",
-      "image": "<REPO_URL>",
+      "image": "<REPO_URL>:<IMAGE_TAG>",
       "essential": true,
       "cpu": 1024,
       "memory": 2048,
