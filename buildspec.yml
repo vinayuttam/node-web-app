@@ -36,6 +36,10 @@ phases:
       - sed -i "s|<IMAGE_TAG>|$IMAGE_TAG|g" taskdef.json
       - sed -i "s|<AWS_ACCOUNT_ID>|$AWS_ACCOUNT_ID|g" taskdef.json
       - sed -i "s|<AWS_REGION>|$AWS_REGION|g" taskdef.json
+      - sed -i "s|<DB_HOST>|$DB_HOST|g" taskdef.json
+      - sed -i "s|<DB_USERNAME>|$DB_USERNAME|g" taskdef.json
+      - sed -i "s|<DB_PASSWORD>|$DB_PASSWORD|g" taskdef.json
+      - sed -i "s|<DB_NAME>|$DB_NAME|g" taskdef.json
 
 artifacts:
   files:
